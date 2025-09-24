@@ -1,0 +1,33 @@
+name: Build DynamicSDK
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Bootstrap project
+        run: ./Scripts/bootstrap.sh
+
+      - name: Build XCFramework
+        run: ./Scripts/build_xcframework.sh
+
+      - name: Upload XCFramework artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: DynamicSDK.xcframework
+          path: BuildArtifacts/DynamicSDK.xcframework

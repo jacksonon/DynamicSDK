@@ -1,0 +1,20 @@
+# Build artifacts
+build/
+Build/
+BuildArtifacts/
+DerivedData/
+*.xcframework
+
+# CocoaPods
+Pods/
+Podfile.lock
+vendor/
+
+# Xcode
+*.xcworkspace
+*.xcodeproj
+xcuserdata/
+*.xcuserstate
+
+# Ruby
+.bundle/
