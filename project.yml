@@ -15,8 +15,8 @@ targets:
     platform: iOS
     deploymentTarget: "12.0"
     configFiles:
-      Debug: "Pods/Target Support Files/Pods-DynamicSDK/Pods-DynamicSDK.debug.xcconfig"
-      Release: "Pods/Target Support Files/Pods-DynamicSDK/Pods-DynamicSDK.release.xcconfig"
+      Debug: Configs/DynamicSDK.debug.xcconfig
+      Release: Configs/DynamicSDK.release.xcconfig
     info:
       path: Sources/DynamicSDK/Info.plist
     sources:
