@@ -27,7 +27,7 @@ jobs:
         run: ./Scripts/build_xcframework.sh
 
       - name: Upload XCFramework artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: DynamicSDK.xcframework
           path: BuildArtifacts/DynamicSDK.xcframework
