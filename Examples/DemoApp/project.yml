@@ -1,0 +1,27 @@
+name: DynamicSDKDemo
+options:
+  bundleIdPrefix: com.dynamic.sdk.demo
+  deploymentTarget:
+    iOS: "13.0"
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+targets:
+  DemoApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Sources
+    info:
+      path: Sources/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dynamic.sdk.demo.app
+    dependencies:
+      - framework: ../../BuildArtifacts/DynamicSDK.xcframework
+        embed: true
+        codeSign: true
