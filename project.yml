@@ -35,6 +35,8 @@ targets:
         CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES: YES
         HEADER_SEARCH_PATHS:
           - $(inherited)
+          - $(SRCROOT)/Sources/DynamicSDK/Public
+          - $(SRCROOT)/Sources/DynamicSDK/Internal
           - $(PODS_ROOT)/Headers/Public
           - $(PODS_CONFIGURATION_BUILD_DIR)/AFNetworking
           - $(PODS_CONFIGURATION_BUILD_DIR)/SDWebImage
